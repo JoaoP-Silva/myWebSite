@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+
+<style>
+    .project.reveal {
+        opacity: 1;
+    }
+</style>
+
+<body>
+    
+    <header>
+        <h1>Projects</h1>
+        <p>Check out some cool projects.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="projetos">
+            <div class="project">
+                <h2>Rerouting Studies</h2>
+                <p>My research work on vehicle rerouting. Implement the EBkSP algorithm using python and SUMO
+                    and run it with different traffic prediction models
+                     to compare them.</p>
+
+                <div class="tools-used">
+                    <p>Used tools:</p>
+                    <img src="images/Untitled.jpeg" alt="python">
+                    <img src="images/SUMO.png" alt="SUMO">
+                </div>
+
+                <a href="https://github.com/JoaoP-Silva/reroutingStudies">More Details</a>
+            </div>
+
+            <div class="project">
+                <h2>JOAOPLEX</h2>
+                <p>Implementation of SIMPLEX algorithm for linear problems in C++.</p>
+                <div class="tools-used">
+                    <p>Used tools:</p>
+                    <img src="images/ISO_C++_Logo.svg.png" alt="cpp">
+                </div>
+                <a href="https://github.com/JoaoP-Silva/JOAOPLEX">More Details</a>
+            </div>
+            
+            <div class="project">
+                <h2><i>Classyfier</i></h2>
+                <p>A (not that good) classifier that uses computational geometry for machine learning.</p>
+                <div class="tools-used">
+                    <p>Used tools:</p>
+                    <img src="images/Untitled.jpeg" alt="python">
+                </div>
+                <a href="https://github.com/JoaoP-Silva/classyfier">More Details (portuguese)</a>
+            </div>
+            
+            <div class="project">
+                <h2>Playlist Assembler</h2>
+                <p>A web tool that given a list of songs, creates a playlist on your streaming service account.</p>
+                <a href="https://github.com/JoaoP-Silva/PlaylistAssembler">More Details (portuguese)</a>
+                <div class="tools-used">
+                    <p>Used tools:</p>
+                    <img src="images/logo-javascript-1024.png" alt="js">
+                </div>
+            </div>
+
+            <div class="project">
+                <h2>MonDeP-SFT</h2>
+                <p>Request management system and data processing via Node and MongoDB (Atlas)</p>
+                <a href="https://github.com/JoaoP-Silva/MonDeP-SFT">More Details (portuguese)</a>
+                <div class="tools-used">
+                    <p>Used tools:</p>
+                    <img src="images/logo-javascript-1024.png" alt="js">
+                    <img src="images/1200px-Node.js_logo.svg.png" alt="node">
+                    <img src="images/mongodb.png" alt="mongo">
+                </div>
+            </div>
+
+            <div class="github-link">
+                <p>Other projects in my <a href="https://github.com/JoaoP-Silva">GitHub</a>.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 João Pedro Fernandes Silva. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const projectItems = document.querySelectorAll('.project');
+    
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, observerOptions);
+    
+        projectItems.forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+    
+</body>
+</html>
