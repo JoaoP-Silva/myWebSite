@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My projects</title>
+    <link rel="stylesheet" href="academic.css">
+</head>
+
+<style>
+    .project.reveal {
+        opacity: 1;
+    }
+</style>
+
+<body>
+    
+    <header>
+        <h1>Projects</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="academic.html">Academic</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="projetos">
+            <div class="project">
+                <h2>Um Estudo Comparativo de Modelos de Fluxo de Tráfego de Veículos para Sistemas de Transporte Inteligentes </h2>
+                <p>SILVA, João Pedro F.; MAIA, Guilherme. Um Estudo Comparativo de Modelos de 
+                    Fluxo de Tráfego de Veículos para Sistemas de Transporte Inteligentes. 
+                    In: WORKSHOP DE COMPUTAÇÃO URBANA (COURB), 8. , 2024, Niterói/RJ.</p>
+                <a href="https://sol.sbc.org.br/index.php/courb/article/view/29999" target="_blank">Full Paper</a>
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 João Pedro Fernandes Silva. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const projectItems = document.querySelectorAll('.project');
+    
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, observerOptions);
+    
+        projectItems.forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+    
+</body>
+</html>
