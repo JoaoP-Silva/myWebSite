@@ -28,102 +28,20 @@
             <img src="images/image.png" alt="Me">
             <p>Passionate about challenges and solving problems using math and software.
                 I have been doing research with professor Dr. Guilherme Maia at the
-                Wisemap Lab for the past two years, on topics such rerouting algorithms, urban computing 
-                and federated learning.<br>
-                I'm a curious person always eager to learn something new!
+                Wisemap Lab for the past three years. My main research topics involve deep learning, urban computing, 
+                algorithms, and others. I currently work on research in traffic signal control using deep reinforcement learning.<br>
+                I'm a curious person always eager to learn something new!<br>
+                On the <a href="projects/projects.html">Projects</a> page, some interesting personal projects are listed and academic publications are on the <a href="academic/academic.html">Academic</a> tab.
             </p>
         </div>
     </section>
 
-    <h2 class="timeline-title">Timeline</h2>
-
-        <section class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">2016 - 2018</div>
-                <div class="timeline-content">
-                    <h2>Technical high school in electronics</h2>
-                    <p>I did high school with an integrated technical course in electronics at 
-                        Federal Center for Technological Education of Minas Gerais. There i had my first
-                        contact with software development, learning C and assembly for applications in embedded systems.
-                    </p>
-                    <img src="images/ELTA.png" alt="ELT-img">
-                </div>
-            </div>
-        </section>
-
-        <section class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date"></div>
-                <div class="timeline-content">
-                    <h2>Eletronic Drum project</h2>
-                    <p>In 2017, i was an exhibitor at the 27th CEFET-MG 
-                        Specific Exhibition of Works and Applications with the project "Electronic Drums". 
-                        After the fair, I was invited to present the project at the 13th IPUC, at PUC-MG and at the National Week 
-                        of Science and Technology at the International Fair
-                        of Business, Innovation and Technology (FINIT), at the Expominas exhibition center (photo).
-                    </p>
-                    <img src="images/Finit.png" alt="FINIT-img">
-                </div>
-            </div>
-        </section>
-
-        <section class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">2019</div>
-                <div class="timeline-content">
-                    <h2>Global Express intern</h2>
-                    <p>In 2019 I was an electronic intern at Global Express. 
-                        I was in charge of analyzing and repairing faulty cell phones. 
-                        I learned a lot about circuit analysis, work organization and especially how to work under pressure.
-                    </p>
-                    <img src="images/1541691756787.jpeg" alt="Global-img">
-                </div>
-            </div>
-        </section>
-
-        <section class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">2019 - Now</div>
-                <div class="timeline-content">
-                    <h2>Undergraduate computer science student</h2>
-                    <p>In 2019 I enrolled in the bachelor's degree in computer science at the Federal University 
-                        of Minas Gerais (UFMG), where I continue to study until today. I have been an undergraduate research fellow in the Department of Computer Science,
-                         where I do research in urban computing at the Wisemap Lab. 
-                    </p>
-                    <img src="images/AnexoU-2019.png" alt="dcc-img">
-                </div>
-            </div>
-        </section>
-
-    </main>
+    
 
     <footer>
         <p>&copy; 2024 João Pedro Fernandes Silva. All rights reserved.</p>
     </footer>
 
-    <script>
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        const timelineTitle = document.querySelector('.timeline-title');
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.2
-        };
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        }, observerOptions);
-
-        timelineItems.forEach(item => {
-            observer.observe(item);
-        });
-
-        observer.observe(timelineTitle);
-    </script>
+    
 </body>
 </html>
